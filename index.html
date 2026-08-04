@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Hotel booking confirmation page</title> 
+</head>
+<body>
+
+  <!-- Sidebar starts -->
+
+  <nav class="sidebar">
+    <img class="baslik_logo" src="./assets/images/logo.svg" alt="Maison Soleil logo" class="logo">
+    <ul class="titles">
+      <li class="title"><img src="./assets/images/icon-bed.svg">Your stay</li>
+      <li class="title"><img src="./assets/images/icon-house.svg">The house</li>
+      <li class="title"><img src="./assets/images/icon-pin.svg">Around town</li>
+      <li class="title"><img src="./assets/images/icon-breakfast-outline.svg">Breakfast</li>
+      <li class="title"><img src="./assets/images/icon-mail.svg">Messages</li>
+    </ul>
+    <div class="card_weather">
+      <img class="sun_img" src="./images/icon-weather.svg" alt="Weather icon">
+      <p class="weather_title">Today in Cassis</p>
+      <p class="weather_temp">27°</p>
+      <p class="weather_desc">Sunny · light breeze</p>
+      
+    </div>
+
+    <div class="card_address">
+      <p class="address_title">Est. 1987</p>
+      <p class="address_desc">Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+      <p class="address_copyright">© 2026 Maison Soleil</p>
+    </div>
+  </nav>
+  <main class="main-content">
+    <header class="baslik">
+      <p class="baslik_title">BOOKING • CONFIRMED</p>
+      <button class="baslik_button">Print receipt</button>
+      <button class="baslik_button1">Add to calendar</button>
+      <p class="yazi">Bienvenue, Lucia.</p>
+    </header>
+    <div class="card1">
+      <div class="card1_top">
+        <div class="receipt_left_group">
+          <p class="label_text">RECEIPT</p>
+          <p class="heading_text">Your stay</p>
+       </div>
+        <div class="receipt_right_group">
+          <p class="label_text">No MS-2026</p>
+          <p class="label_text">0421-AH</p>
+       </div>
+      </div>
+      <div class="card1_center1">
+        <div class="card1_center1_left">
+          <p class="label_text">CHECK IN</p>
+          <p class="heading_text">25 Apr</p>
+          <p class="label_time">Saturday • 15:00</p>
+        </div>
+        <div class="card1_center1_right">
+          <p class="label_text">CHECK OUT</p>
+          <p class="heading_text">29 Apr</p>
+          <p class="label_time">Wednesday • 11:00</p>
+        </div>
+      </div>
+      <div class="card1_center2">
+        <div class="card1_center2_left">
+          <p class="ccl">Room • La Garrigue × 4 nights</p>
+          <p class="ccl">Breakfast × 2 guests</p>
+          <p class="ccl1">Tourist Tax</p>
+        </div>
+        <div class="card1_center2_right">
+          <p class="ccl">€ 620.00</p>
+          <p class="ccl">€ 96.00</p>
+          <p class="ccl1">€ 14.40</p>
+        </div>
+      </div>
+      <div class="card1_bottom">
+        <div class="card1_bottom_left">
+          <p class="label_text">TOTAL PAID</p>
+          <p class="label_text">PAID • WISE • GBP</p>
+        </div>
+        <div class="card1_bottom_right">
+          <p class="heading_text">€ 730.40</p>
+          <p class="barcode"><img src="./assets/images/icon-barcode.svg" alt="Barcode"></p>
+        </div>
+    </div>
+  </main>
+</body>
+</html>
