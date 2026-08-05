@@ -1,18 +1,38 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    width: 17%;/*17% degistir*/
     min-width: 200px;
     height: 100vh;
-    background-color: hsl(35, 60%, 96%);
+    background-color: hsl(41, 55%, 87%);
     padding: 20px;
 }
 ul{
     list-style-type: none;
-
 }
-.titles{
-
+body{
+    display: grid;
+    grid-template-columns: 265px 1fr; 
+    min-height: 100vh;
+    background-color: hsl(35, 60%, 96%);
+    margin: 0;
+}
+.baslik_title{
+    opacity: 0.5;
+}
+.button_container{
+    display: flex;
+}
+.baslik_button{
+    color: black;
+    background-color: white;
+    border-radius: 40px;
+    opacity: 0.8;
+}
+.baslik_button1{
+    color: white;
+    background-color: black;
+    border-radius: 40px;
+    opacity: 0.8;
 }
 .card_address{
     display: flex;
@@ -37,7 +57,72 @@ ul{
 main{
     display: flex;
     flex-direction: column;
-    width: 83%;
     height: 100vh;
     background-color: hsl(35, 60%, 96%);
+}
+.card_container{
+    display: flex;
+    gap: 15px;
+}
+.receipt_right_group{
+    text-align: right;
+}
+
+.card1{
+    background-color: white;
+    padding:20px;
+    border-radius: 30px;
+    width: 45%;
+}
+.card1_top{
+    display: flex;
+    justify-content: space-between;
+}
+.card1_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.card1_center1{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.card1_center2{
+    display: flex;
+    justify-content: space-between;
+}
+.card2{
+    background-color: hsl(22, 72%, 56%) ;
+    padding:20px;
+    border-radius: 30px;
+    width: 45%;
+}
+.card_container2{
+    display: flex;
+    gap: 15px;
+}
+.card_b1{
+    background-color: white;
+    padding:20px;
+    border-radius: 30px;
+    width: 30%;
+}
+.card_b1_header{
+    color: rgb(157, 69, 6);
+}
+.card_b1_header_img{
+    background-color: rgb(157, 69, 6);
+    border-radius: 10px;
+}
+.card_b2{
+    background-color: white;
+    padding:20px;
+    border-radius: 30px;
+    width: 30%;
+}
+.card_b3{
+    background-color: white;
+    padding:20px;
+    border-radius: 30px;
+    width: 30%;
 }
