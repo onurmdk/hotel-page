@@ -1,78 +1,163 @@
-.sidebar{
+@font-face {
+    font-family: "fraunces";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+}
+@font-face {
+    font-family: "dm_sans";
+    src: url("assets/fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf");
+    font-weight: 400 600;
+}
+@font-face {
+    font-family: "dm_mono";
+    src: url("assets/fonts/dm-mono/DMMono-Regular.ttf");
+    font-weight: 400 500;
+}
+@font-face {
+    font-family: "fraunces_italic";
+    font-style: italic;
+    font-weight: 400;
+    src: url("assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf");
+}
+:root{
+    --neutral-900: hsl(33, 15%, 15%);
+    --neutral-800: hsl(33, 22%, 20%);
+    --neutral-700: hsl(32, 20%, 29%);
+    --neutral-600: hsl(33, 17%, 41%);
+    --neutral-400: hsl(36, 22%, 86%);
+    --neutral-200: hsl(30, 24%, 93%);
+    --neutral-100: hsl(35, 60%, 96%);
+    --neutral-50: hsl(40, 60%, 98%);
+    --neutral-0: hsl(0, 0%, 100%);
+    --sun-500: hsl(42, 83%, 58%);
+    --sun-300:hsl(44, 84%, 75%);
+    --sun-200:hsl(45, 100%, 74%);
+    --sun-50:hsl(41, 100%, 93%);
+    --terracotta-700: hsl(15, 69%, 37%);
+    --terracotta-600: hsl(15, 74%, 41%);
+    --terracotta-500: hsl(18, 62%, 47%);
+    --terracotta-400: hsl(22, 72%, 56%);
+    --blue-500: hsl(230, 49%, 56%);
+    --rose-500: hsl(340, 48%, 52%);
+}
+main{
     display: flex;
     flex-direction: column;
-    min-width: 200px;
-    height: 100vh;
-    background-color: hsl(41, 55%, 87%);
-    padding: 20px;
-}
-ul{
-    list-style-type: none;
+    background-color:var(--neutral-50);
 }
 body{
     display: grid;
     grid-template-columns: 265px 1fr; 
     min-height: 100vh;
-    background-color: hsl(35, 60%, 96%);
+    background-color: var(--neutral-50);
     margin: 0;
+    font-family: "dm_sans", sans-serif;
+    font-size: 14px;
 }
-.baslik_title{
-    opacity: 0.5;
-}
-.button_container{
+/*sidebarS*/
+
+.sidebar{
     display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    height: 100vh;
+    background-color: var(--neutral-50);
+    padding: 20px;
 }
-.baslik_button{
-    color: black;
-    background-color: white;
-    border-radius: 40px;
-    opacity: 0.8;
+ul{
+    list-style-type: none;
 }
-.baslik_button1{
-    color: white;
-    background-color: black;
-    border-radius: 40px;
-    opacity: 0.8;
+.titles{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 4px;
+}
+.sidebar a{
+    text-decoration: none;
+    color: inherit;
+}
+.title a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .card_address{
     display: flex;
     flex-direction: column;
     margin-top: auto;
+    font-family: "dm_mono", sans-serif;
+    text-transform: uppercase;
 }
 .card_weather{
     position: relative;
     flex-direction: column;
-    background-color: hsl(45, 100%, 74%);
+    background-color:var(--sun-200);
     border-radius: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
     overflow: hidden;
 }
 .sun_img{
     position: absolute;
     width: 100px;
     height: 100px;
-    right: -20px;
-    top: -20px;
+    right: -28px;
+    top: -28px;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: hsl(35, 60%, 96%);
+.weather_temp{
+    font-family: "fraunces", sans-serif;
+    font-size: 20px;
 }
-.card_container{
-    display: flex;
-    gap: 15px;
+.weather_title{
+    text-transform: uppercase; 
+    font-family: "fraunces", sans-serif;
 }
-.receipt_right_group{
-    text-align: right;
-}
+/*sidebarF*/
 
-.card1{
-    background-color: white;
-    padding:20px;
-    border-radius: 30px;
-    width: 45%;
+/*mainS*/
+
+/*headerS*/
+
+.baslik_title{
+    opacity: 0.5;
+}
+.button_container{
+    display: flex;
+    gap: 10px;
+}
+.baslik_button{
+    color: var(--neutral-900);
+    background-color: var(--neutral-0);
+    border-radius: 40px;
+    opacity: 0.8;
+}
+.header_ust{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.baslik_button1{
+    color: var(--neutral-0);
+    background-color: var(--neutral-900);
+    border-radius: 40px;
+    opacity: 0.8;
+}
+.yazi{
+    font-size: 40px;
+}
+/*headerF*/
+
+/*centerS*/
+.card_container {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+.card1 {
+    width: 100%;
+    background-color: var(--neutral-0);
+    border-radius: 15px; 
 }
 .card1_top{
     display: flex;
@@ -91,38 +176,98 @@ main{
     display: flex;
     justify-content: space-between;
 }
-.card2{
-    background-color: hsl(22, 72%, 56%) ;
-    padding:20px;
-    border-radius: 30px;
-    width: 45%;
+.card1_center2_right{
+    font-family: "dm_mono", sans-serif;
 }
+.receipt_right_group{
+    text-align: right;
+}
+.card2 {
+    font-family:"fraunces", sans-serif;
+    background-color: var(--terracotta-500);
+    padding: 40px;
+    border-radius: 30px;
+    width: 400px;
+    color: var(--neutral-0);
+}
+.card2_center_p1{
+    font-family: "fraunces_italic", sans-serif;
+    opacity: 0.7;
+}
+.hover_text{
+    font-family: "dm_sans", sans-serif;
+    text-transform: uppercase;
+}
+.heading_text{
+    font-size:22px;
+}
+.card1_bottom_right .heading_text{
+    font-size:32px;
+}
+.card1_center1 .heading_text{
+    font-size:32px;
+}
+.label_text{
+    font-size: 12px;
+}
+/*centerF*/
+
+/*bottomS*/
 .card_container2{
     display: flex;
     gap: 15px;
 }
 .card_b1{
-    background-color: white;
+    background-color: var(--neutral-0);
     padding:20px;
     border-radius: 30px;
-    width: 30%;
-}
-.card_b1_header{
-    color: rgb(157, 69, 6);
+    flex: 1;
 }
 .card_b1_header_img{
-    background-color: rgb(157, 69, 6);
+    background-color: var(--terracotta-700);
     border-radius: 10px;
 }
+.card_b1_header{
+    color: var(--terracotta-700);
+    font-family: "dm_sans", sans-serif;
+}
+
 .card_b2{
-    background-color: white;
+    background-color: var(--neutral-0);
     padding:20px;
     border-radius: 30px;
-    width: 30%;
+    flex: 1;
+}
+.card_b2_header{
+    font-family: "fraunces_italic", sans-serif;
+    color: var(--blue-500);
+}
+.card_b2_header_img{
+    background-color: var(--blue-500);
+    border-radius: 10px;
 }
 .card_b3{
-    background-color: white;
+    background-color: var(--neutral-0);
     padding:20px;
     border-radius: 30px;
-    width: 30%;
+    flex: 1;
 }
+.card_b3_header{
+    font-family: "dm_mono", monospace;
+    color: var(--rose-500);
+}
+.card_b3_header_img{
+    background-color: var(--rose-500);
+    border-radius: 10px;
+}
+.heading_text{
+    font-family: "fraunces", sans-serif;
+}
+.titles{
+    font-family: "dm_sans", sans-serif;
+}
+.info2{
+    font-family: "dm_sans", sans-serif;
+}
+/*bottomF*/
+/*mainF*/
