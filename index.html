@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Hotel booking confirmation page</title> 
 </head>
 <body>
@@ -15,6 +16,7 @@
 
   <nav class="sidebar">
     <img class="baslik_logo" src="./assets/images/logo.svg" alt="Maison Soleil logo">
+    <button class="sidebar_button" aria-label="open_menu"><img class="menu_icon" src="./assets/images/icon-menu.svg" alt="Menu icon"><img class="close_icon" src="./assets/images/icon-close.svg" alt="close icon"></button>
     <ul class="titles">
       <li class="title active"><a href="#"><img src="./assets/images/icon-bed.svg">Your stay<span class="notification">1</span></a></li>
       <li class="title"><a href="#"><img src="./assets/images/icon-house.svg">The house</a></li>
@@ -38,12 +40,10 @@
   </nav>
   <main class="main-content">
     <header class="baslik">
-      <div class="header_ust">
-        <p class="baslik_title">BOOKING • CONFIRMED</p>
-        <div class="button_container">
-          <button type="button" class="baslik_button">Print receipt</button>
-          <button type="button" class="baslik_button1">Add to calendar</button>
-        </div>
+      <p class="baslik_title">BOOKING • CONFIRMED</p>
+      <div class="button_container">
+        <button type="button" class="baslik_button">Print receipt</button>
+        <button type="button" class="baslik_button1">Add to calendar</button>       
       </div>
       <h1 class="yazi">Bienvenue,<span class="italicyazi"> Lucia.</span></h1>
     </header>
@@ -52,7 +52,7 @@
         <div class="card1_top">
           <div class="receipt_left_group">
             <p class="label_text">RECEIPT</p>
-            <p class="heading_text">Your stay</p>
+            <h2 class="heading_text">Your stay</h2>
           </div>
           <div class="receipt_right_group">
             <p class="label_text">No MS-2026</p>
@@ -121,11 +121,11 @@
       <div class="card_b1">
         <div class="card_b1_header">
           <img class="card_b1_header_img" src="./assets/images/icon-key.svg" alt="Key icon">
-          <p class="card_b1_baslik">ARRIVAL</p>
+          <h3 class="card_b1_baslik">ARRIVAL</h3>
           <p class="card_b1_header_num">01</p>
         </div>
         <div class="card_b1_center">
-          <p class="heading_text">Check-in from 15:00</p>
+          <h2 class="heading_text">Check-in from 15:00</h2>
           <p class="info">Sat, 25 April</p>
           <p class="info2">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
         </div>
@@ -133,11 +133,11 @@
       <div class="card_b2">
         <div class="card_b2_header">
           <img class="card_b2_header_img" src="./assets/images/icon-wifi.svg" alt="Wifi icon">
-          <p class="card_b2_baslik">WIFI</p>
+          <h3 class="card_b2_baslik">WIFI</h3>
           <p class="card_b2_header_num">02</p>
         </div>
         <div class="card_b2_center">
-          <p class="heading_text">Le Soleil • Guest</p>
+          <h2 class="heading_text">Le Soleil • Guest</h2>
           <p class="info">Password below</p>
           <div class="card_b2_center_cards">
             <div class="card_b2_center_card1">
@@ -155,17 +155,17 @@
       <div class="card_b3">
         <div class="card_b3_header">
           <img class="card_b3_header_img" src="./assets/images/icon-breakfast.svg" alt="Breakfast icon">
-          <p class="card_b3_baslik">BREAKFAST</p>
+          <h3 class="card_b3_baslik">BREAKFAST</h3>
           <p class="card_b3_header_num">03</p>
         </div>
         <div class="card_b3_center">
-          <p class="heading_text">Served 8 - 10:30</p>
+          <h2 class="heading_text">Served 8 - 10:30</h2>
           <p class="info">On the terrace</p>
           <p class="info2">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</p>
         </div>
       </div>
     </div>
   </main>
-
+  <script src="script.js"></script>
 </body>
 </html>

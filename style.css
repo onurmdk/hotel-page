@@ -74,6 +74,20 @@ ul{
 .baslik_logo{
     width: 40%;
 }
+.sidebar_button{
+    display: none;
+    margin-left: auto;
+}
+.sidebar_button .menu_icon{
+    display: none;
+    width: 50px;
+    margin-left: auto;    
+}
+.sidebar_button .close_icon{
+    display: none;
+    width: 50px;
+    margin-left: auto;
+}
 .titles{
     border-top: 1px solid var(--neutral-400);
     display: flex;
@@ -158,10 +172,12 @@ ul{
 
 .baslik_title{
     opacity: 0.5;
+    grid-area: sol_ust;
 }
 .button_container{
     display: flex;
     gap: 15px;
+    grid-area: sag;
 }
 .italicyazi{
     font-family: "fraunces_italic", sans-serif;
@@ -169,7 +185,6 @@ ul{
 }
 .baslik_button{
     background-color: white;
-    border: 1px solid var(--neutral-400);
     border-radius: 50px;
     padding:10px;
     margin: 5px;
@@ -182,11 +197,20 @@ ul{
     outline: 2px solid var(--terracotta-400);
     border-radius:50px;
 }
-.header_ust{
+.baslik{
     margin-left: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     align-items: center;
+    grid-template-areas:
+    "sol_ust  sag"
+    "sol_alt  sag";/*tirnak satir  her kelimede sutun ayni kelime yani 1-1 solda 1 sagda ayni boyutta*/
+    grid-template-columns: 3fr 1fr;
+}
+.yazi{
+    grid-area: sol_alt;
+    margin-left: 10px;
+    font-size: 40px;
+    font-family: fraunces, sans-serif;
 }
 .baslik_button1{
     color: white;
@@ -203,11 +227,7 @@ ul{
     outline: 2px solid var(--terracotta-400);
     border-radius:50px;
 }
-.yazi{
-    margin-left: 10px;
-    font-size: 40px;
-    font-family: fraunces, sans-serif;
-}
+
 /*headerF*/
 
 /*centerS*/
@@ -224,7 +244,7 @@ ul{
     top: 50%;
     margin-top: auto;
     opacity: 0;
-    transition: opacity 0.4s,translateX 3s;
+    transition: opacity 0.4s;
 }
 .card_container:hover{
     gap: 40px;
@@ -317,10 +337,21 @@ ul{
     color: var(--sun-50);
     font-size: 32px;
 }
+.card2_top .label_text{
+    opacity: 0.5;
+    border-top: 1px dotted var(--neutral-400);
+}
+.imgsun{
+    display: flex;
+    margin-left: auto;
+}
 .card2_bottom{
     display: flex;
     margin-top: auto;
     flex-direction: column;/*FLEX VARSA SATIR ISTIYORSAN YAZ*/
+}
+.card2_center_p3{
+    font-family: dm_sans, sans-serif;
 }
 
 .hover_text{
@@ -439,7 +470,6 @@ ul{
     margin-left: 10px;
     cursor: pointer;
     background-color: var(--neutral-400);
-    border: 0px;
     border-radius: 30px;
     color: var(--neutral-700);
     border: 2px solid transparent;/*menu kayiyor*/
@@ -492,3 +522,103 @@ ul{
 
 
 /*mediaS*/
+
+@media (max-width:768px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    .sidebar, .sidebar_button, .sidebar_button .menu_icon{
+        display: flex;
+        flex-direction: row;
+        position: sticky;
+        height: 40px;
+        z-index: 10;
+    }
+    .titles, .card_weather, .card_address{
+        display: none;
+    }
+    .sidebar.acik{
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        background-color: var(--neutral-100);
+        padding: 20px;
+        border-right: 1px solid var(--neutral-400);
+    }
+    .sidebar.acik .titles,.sidebar.acik .card_address,.sidebar.acik .card_weather{
+        display: flex;
+    }
+    .sidebar.acik .sidebar_button .close_icon{
+        display: flex;
+        flex-direction: row;
+    }
+    .sidebar.acik .sidebar_button .menu_icon{
+        display: none;
+    }
+    .button_container{
+        flex-direction: row;
+        gap: 5px;
+        order: -4;
+    }
+    .baslik{
+        grid-template-areas:
+        "ust"
+        "merkez" 
+        "alt";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .baslik_title{
+        grid-area: ust;
+    }
+    .yazi{
+        grid-area:merkez;
+    }
+    .button_container{
+        grid-area: alt;
+        align-items: center;
+        margin: 0px;
+    }
+    .card_container{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .card1{
+        position: static;
+        width: auto;
+        height: auto;
+        transform:rotate(-4deg);
+    }
+    .card2{
+        position: static;
+        width: auto;
+        height: auto;
+        order: -1;
+        transform:rotate(4deg);
+    }
+    .card_container:hover{
+        gap: 0px;
+        .card1{
+            transform: rotate(-4deg);
+        }
+        .card2{
+            transform: rotate(4deg);
+        }
+    }
+    .sun_hover{
+        display: none;
+    }
+    .hover_part{
+        display: none;
+    }
+    .card_container2{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+    
